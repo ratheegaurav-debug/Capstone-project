@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | SmartStock SME</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="auth-container">
+    <div class="auth-card">
+        <div class="mb-1">
+            <i class="fas fa-user-plus fa-3x" style="color: var(--primary);"></i>
+        </div>
+        <h1>Join SmartStock</h1>
+        <p>Start managing your business efficiently</p>
+
+        <form action="dashboard.html" method="GET">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" class="form-input" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" class="form-input" placeholder="name@company.com" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-input" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Create Account</button>
+        </form>
+
+        <p class="mt-1" style="font-size: 0.9rem;">
+            Already have an account? <a href="index.html" style="color: var(--primary); font-weight: 600; text-decoration: none;">Login</a>
+        </p>
+    </div>
+</body>
+</html>
