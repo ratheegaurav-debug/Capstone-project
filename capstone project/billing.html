@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing | SmartStock SME</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i class="fas fa-boxes-stacked"></i>
+                <span>SmartStock</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html"><i class="fas fa-chart-line"></i> <span>Dashboard</span></a></li>
+                <li><a href="inventory.html"><i class="fas fa-list"></i> <span>Inventory</span></a></li>
+                <li><a href="billing.html" class="active"><i class="fas fa-file-invoice-dollar"></i> <span>Billing</span></a></li>
+                <li><a href="#"><i class="fas fa-gear"></i> <span>Settings</span></a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="flex-between mb-1">
+                <div>
+                    <h1 style="font-size: 1.8rem; color: var(--primary);">Billing System</h1>
+                    <p style="color: var(--text-muted);">Process sales and generate receipts</p>
+                </div>
+            </header>
+
+            <div class="billing-grid">
+                <div class="selection-area">
+                    <div class="card">
+                        <h2 style="font-size: 1.1rem; margin-bottom: 1rem;">Select Products</h2>
+                        <div class="form-group">
+                            <label>Search Product</label>
+                            <input type="text" id="billingProductSearch" class="form-input" placeholder="Start typing product name...">
+                        </div>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Wireless Mouse</td>
+                                        <td>$25.00</td>
+                                        <td><button class="btn btn-primary" style="padding: 5px 12px; font-size: 0.8rem;">Add</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mechanical Keyboard</td>
+                                        <td>$120.00</td>
+                                        <td><button class="btn btn-primary" style="padding: 5px 12px; font-size: 0.8rem;">Add</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>USB-C Hub</td>
+                                        <td>$30.00</td>
+                                        <td><button class="btn btn-primary" style="padding: 5px 12px; font-size: 0.8rem;">Add</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-summary">
+                    <div class="card">
+                        <h2 style="font-size: 1.1rem; margin-bottom: 1.5rem;">Cart Details</h2>
+                        <div id="cartItems">
+                            <div class="flex-between mb-1" style="font-size: 0.9rem;">
+                                <span>Wireless Mouse x 1</span>
+                                <span>$25.00</span>
+                            </div>
+                            <div class="flex-between mb-1" style="font-size: 0.9rem;">
+                                <span>USB-C Hub x 2</span>
+                                <span>$60.00</span>
+                            </div>
+                        </div>
+                        <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid var(--border-color);">
+                        <div class="flex-between mb-1">
+                            <span style="color: var(--text-muted);">Subtotal</span>
+                            <span>$85.00</span>
+                        </div>
+                        <div class="flex-between mb-1">
+                            <span style="color: var(--text-muted);">Tax (5%)</span>
+                            <span>$4.25</span>
+                        </div>
+                        <div class="flex-between mb-1" style="font-weight: 700; font-size: 1.2rem; color: var(--primary);">
+                            <span>Total</span>
+                            <span>$89.25</span>
+                        </div>
+                        <button class="btn btn-success mt-1" style="width: 100%; padding: 1rem;" onclick="processSale()">
+                            <i class="fas fa-check-circle"></i> Process Sale
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
